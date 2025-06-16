@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    /*reseta estilos donnavegador*/
+    padding: 0;
+    /*reseta estilos donnavegador*/
+    box-sizing: border-box;
+    /*significa que a largura a altura incluem padding e border*/
+}
+
+body {
+    margin: 0 auto;
+    /*centraliza horizontalmente*/
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    background-color: #6d2c9e;
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    font-size: x-small;
+    height: 12rem;
+}
+
+header h1 {
+    font-family: "WDXL Lubrifont TC", sans-serif;
+    font-style: normal;
+    font-size: 10em;
+}
+
+header h3 {
+    font-family: "Ubuntu Sans", sans-serif;
+    font-style: normal;
+}
+
+nav {
+    align-items: center;
+    background-color: #360f53;
+    font-size: small;
+}
+
+nav ul {
+    display: grid;
+    justify-content: center;
+    gap: 10%;
+    width: 100%;
+    list-style: none;
+    /*para desaparecer a bolinha ao lado do item*/
+    font-size: 140%;
+}
+
+.nav-link {
+    font-family: "Inter Medium", sans-serif;
+    font-style: normal;
+    align-content: center;
+}
+
+.bloco-imagens {
+    margin-top: 4fr;
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    height: 2fr;
+    align-content: center;
+    border-style: solid;
+    border-color: #9439df;
+    border-radius: 25px;
+}
+
+footer {
+    background-color: rgba(30, 30, 30, 0.8);
+    color: rgb(234, 167, 255);
+    text-align: center;
+
+    /* Evita margem fixa */
+    margin: 2vh auto;
+    /* 2% da altura da viewport verticalmente, centralizado horizontalmente */
+
+    /* Altura flexível */
+    min-height: 5vh;
+    /* ocupa pelo menos 5% da viewport vertical */
+    padding: 1rem;
+    /* padding interno proporcional à fonte base */
+
+    border: 0.2rem solid #9439df;
+    /* borda responsiva */
+    border-radius: 2rem;
+    /* cantos arredondados escaláveis */
+}
+
+
+/* BLOCO DE CADASTRO*/
+.container-cadastro {
+    padding: 30px;
+    /* bloco interno, espaçamento pra dar mais espaço pra respirar */
+    border-radius: 30px;
+    /* borda bem arredondada, no limite, nao arredondar mais */
+    background-color: black;
+    /* cor insatisfatoria, blocos pretos e letras brancas sao agressivas */
+    font-size: small;
+    /* PRECISA MELHORAR // ACESSIBILIDADE // os clientes devem conseguir ler */
+    margin: 40px;
+    /* espaço do lado externo, precisa ser grande para dar foco ao cadastro */
+}
+
+.container-fotos-portal {
+    padding: 30px;
+    /* bloco interno, espaçamento pra dar mais espaço pra respirar */
+    border-radius: 30px;
+    /* borda bem arredondada, no limite, nao arredondar mais */
+    background-color: rgb(24, 4, 29);
+    /* cor insatisfatoria, blocos pretos e letras brancas sao agressivas */
+    width: 35rem;
+    margin-left: 33%;
+}
+
+img {
+    border-radius: 5%;
+}
+
+.titulo h1 {
+    font-family: "WDXL Lubrifont TC", sans-serif;
+    font-style: normal;
+    font-size: 7em;
+    color: white;
+    text-align: center;
+}
+
+/*LOCALIDADES*/
+.locais {
+    background-color: rgba(30, 30, 30, 0.8);
+    /* 0.8 = 80% de opacidade */
+    border-radius: 4cap;
+    border-style: solid;
+    border-color: #9439df;
+}
+
+.itens {
+    display: flex;
+}
+
+.fotos {
+    margin-bottom: 3%;
+    text-align: center;
+}
+
+.texto {
+    color: white;
+    text-align: center;
+}
+
+/*MAPS - LOCALIZAÇÃO*/
+.mapBox {
+    position: relative;
+    text-align: center;
+}
+
+/*TELAS MOBILE*/
+@media screen and (max-width: 1366px) {
+    .container-fotos-portal {
+        margin-left: 27%;
+    }
+}
+
+@media screen and (max-width: 1114px) {
+    .container-fotos-portal {
+        margin-left: 25%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        height: 8rem;
+    }
+
+    header h1 {
+        font-family: "WDXL Lubrifont TC", sans-serif;
+        font-style: normal;
+        font-size: 7em;
+    }
+
+    .container-fotos-portal {
+        margin: auto;
+        width: 100%;
+        padding: 3%;
+    }
+
+    .titulo h1 {
+        font-size: 7em;
+    }
+
+    .locais{
+        display:table-cell;
+    }
+
+    .fotos img{
+        border-radius: 10%;
+    }
+}
+
+
+@media screen and (max-width: 360px) {
+    header {
+        height: 9rem;
+    }
+
+    header h1 {
+        font-family: "WDXL Lubrifont TC", sans-serif;
+        font-style: normal;
+        font-size: 8em;
+    }
+
+    .container-fotos-portal {
+        margin: auto;
+        width: 100%;
+        padding: 3%;
+    }
+
+    .titulo h1 {
+        font-size: 6em;
+    }
+
+    .locais{
+        display:table-cell;
+    }
+
+    .fotos img{
+        border-radius: 10%;
+    }
+
+    .mapBox iframe {
+        width: 97%;
+    }
+}
