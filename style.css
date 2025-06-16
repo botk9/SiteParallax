@@ -202,7 +202,7 @@ img {
 }
 
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 428px) {
     header {
         height: 9rem;
     }
